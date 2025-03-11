@@ -1,0 +1,12 @@
+<header>
+    <nav>
+      <ul>
+        {% for page in site.pages %}
+          {% if page.path != "about.md" or page.url != page.url %}
+            <li><a href="{{ page.url | relative_url }}">{{ page.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+</header>
+  
