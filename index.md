@@ -2,7 +2,6 @@
 title: "Welcome to My Tech Blog"
 date: 2025-03-11
 author: "Usman Asif"
-layout: default
 ---
 
 # Introduction
