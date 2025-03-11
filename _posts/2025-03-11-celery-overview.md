@@ -1,9 +1,8 @@
 ---
-title: "Understanding Celery"
+title: "Understanding Celery: Distributed Task Queues in Django"
 date: 2025-03-11
+author: "Usman Asif"
 ---
-
-# Understanding Celery: Distributed Task Queues in Django
 
 ## Introduction  
 

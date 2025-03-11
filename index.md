@@ -1,22 +1,25 @@
-# Welcome to My Tech Blog 🚀
+---
+title: "Welcome to My Tech Blog"
+date: 2025-03-11
+author: "Usman Asif"
+---
+
+# Introduction
 
 Hi! I'm a developer working on backend systems. This blog is where I share updates about my work, insights into RestAPIs, Databases, Background jobs, RabbitMQ, Elasticsearch, and other cool tech I'm working with.
 
 ---
 
-## 🔥 Latest Posts  
-- **[Deploying an Elasticsearch Cluster on AWS](#)** *(March 2025)*  
-- **[Optimizing Celery Task Routing in Django](#)** *(February 2025)*  
-- **[Understanding OLX Ad Insertion Flow](#)** *(January 2025)*  
+## Latest Posts  
+- **[Understanding Celery: Distributed Task Queues in Django](https://usmanasifbutt.github.io/github-blog/2025/03/11/celery-overview.html)**
 
 *See all posts [here](#).*
 
 ---
 
 ## 🛠 What I’m Working On  
-- Scaling **Celery** task execution for large-scale OLX ad ingestion  
+- Improving **Celery** task execution for large-scale DB operations
 - Improving **Elasticsearch** indexing performance  
-- Enhancing **Keycloak SSO authentication** in Django apps  
 
 ---
 
@@ -24,4 +27,4 @@ Hi! I'm a developer working on backend systems. This blog is where I share updat
 - GitHub: [github.com/usmanasifbutt](#)  
 - LinkedIn: [linkedin.com/in/usman-asif-ua2208/](#)  
 
-Stay tuned for more updates! 🚀
+Stay tuned for more updates!
