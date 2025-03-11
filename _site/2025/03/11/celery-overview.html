@@ -1,0 +1,61 @@
+<h2 id="introduction">Introduction</h2>
+
+<p>In modern web applications, certain tasks—like sending emails, processing images, or handling background jobs—can be time-consuming and shouldn’t block user requests. This is where <strong>Celery</strong> comes in. Celery is a powerful <strong>distributed task queue</strong> that enables you to process tasks asynchronously using <strong>queues and workers</strong>.</p>
+
+<p>In this post, we’ll dive into:</p>
+<ul>
+  <li>What Celery is and why it’s useful</li>
+  <li>How Celery uses <strong>queues</strong> to manage tasks</li>
+  <li>The role of <strong>workers</strong> in processing those tasks</li>
+  <li>How to set up Celery in a Django project</li>
+</ul>
+
+<hr />
+
+<h2 id="what-is-celery">What is Celery?</h2>
+
+<p>Celery is an <strong>asynchronous task queue</strong> that allows you to run background jobs in a distributed environment. Instead of running a heavy computation task inside a Django view (blocking the request), you send the task to a queue, and a Celery <strong>worker</strong> picks it up and executes it in the background.</p>
+
+<h3 id="why-use-celery">Why Use Celery?</h3>
+<ul>
+  <li><strong>Improves performance</strong> – Background tasks don’t block the main application.</li>
+  <li><strong>Handles long-running jobs</strong> – Ideal for tasks like sending emails, generating reports, or processing large datasets.</li>
+  <li><strong>Supports distributed execution</strong> – You can scale by adding more workers to process tasks in parallel.</li>
+  <li><strong>Built-in retries</strong> – If a task fails, Celery can automatically retry it based on your configuration.</li>
+</ul>
+
+<hr />
+
+<h2 id="how-celery-uses-queues">How Celery Uses Queues</h2>
+
+<p>A <strong>queue</strong> is a buffer where tasks wait to be executed. Celery sends tasks to message brokers like <strong>RabbitMQ</strong> or <strong>Redis</strong>, which act as intermediaries between the Django app and Celery workers.</p>
+
+<p>Here’s a typical Celery workflow:</p>
+<ol>
+  <li><strong>Django App</strong> sends a task to Celery.</li>
+  <li>The task is placed in a <strong>queue</strong> (stored in Redis or RabbitMQ).</li>
+  <li>A <strong>worker</strong> picks up the task from the queue and processes it.</li>
+  <li>Once completed, the worker sends back the result (if required).</li>
+</ol>
+
+<h3 id="task-queues-in-celery">Task Queues in Celery</h3>
+<p>Celery supports multiple queues to help prioritize different types of tasks. Some common queue setups:</p>
+<ul>
+  <li><strong>Default queue</strong> – Where all tasks go if no queue is specified.</li>
+  <li><strong>High-priority queue</strong> – For urgent tasks that need immediate processing.</li>
+  <li><strong>Low-priority queue</strong> – For background tasks that can wait.</li>
+  <li><strong>Dead Letter Queue (DLQ)</strong> – For failed tasks that need manual inspection.</li>
+</ul>
+
+<p>In Django, you can configure Celery to route tasks to specific queues based on task type.</p>
+
+<hr />
+
+<h2 id="celery-workers-processing-tasks">Celery Workers: Processing Tasks</h2>
+
+<p>A <strong>worker</strong> is a process that listens for incoming tasks from a queue and executes them. You can run multiple workers on different servers to <strong>scale processing power</strong>.</p>
+
+<p>To start a worker, use:<br />
+<code>
+celery -A myproject worker --loglevel=info
+</code></p>
