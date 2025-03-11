@@ -8,3 +8,14 @@ header_pages:
 
 minima:
   skin: dark
+ 
+  social_links:
+    - title: LinkedIn
+      icon: linkedin
+      url: "https://www.linkedin.com/in/usman-asif-ua2208/"
+    - title: GitHub
+      icon: github
+      url: "https://github.com/usmanasifbutt"
+    - title: Instagram
+      icon: instagram
+      url: "https://www.instagram.com/usman.asif22/"

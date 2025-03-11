@@ -4,9 +4,8 @@ date: 2025-03-11
 author: "Usman Asif"
 layout: home
 ---
-
+<p></p>
 # Introduction
-
 Hi! I'm a developer working on backend systems. This blog is where I share updates about my work, insights into RestAPIs, Databases, Background jobs, RabbitMQ, Elasticsearch, and other cool tech I'm working with.
 
 ---
