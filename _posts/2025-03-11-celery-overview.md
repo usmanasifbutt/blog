@@ -55,5 +55,6 @@ In Django, you can configure Celery to route tasks to specific queues based on t
 A **worker** is a process that listens for incoming tasks from a queue and executes them. You can run multiple workers on different servers to **scale processing power**.
 
 To start a worker, use:  
-```bash
+<code>
 celery -A myproject worker --loglevel=info
+</code>
