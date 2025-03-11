@@ -15,7 +15,7 @@ If you have something interesting to share and want to post on my blog, follow t
 ### 1️⃣ Fork & Clone the Repository
 First, fork this repository and clone it to your local machine:
 ```
-git clone https://github.com/usmanasifbutt/github-blog.git
+git clone https://github.com/usmanasifbutt/blog.git
 ```
 ### 2️⃣ Create a New Blog Post
 Jekyll uses a specific format for blog posts. Navigate to the _posts/ directory and create a new Markdown file:

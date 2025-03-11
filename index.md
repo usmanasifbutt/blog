@@ -12,15 +12,14 @@ Hi! I'm a developer working on backend systems. This blog is where I share updat
 ---
 <br>
 ## Latest Posts  
-- **[Understanding Celery: Distributed Task Queues in Django](https://usmanasifbutt.github.io/github-blog/2025/03/11/celery-overview.html)**
+- **[Understanding Celery: Distributed Task Queues in Django](https://usmanasifbutt.github.io/blog/2025/03/11/celery-overview.html)**
 
-*See all posts **[here](https://usmanasifbutt.github.io/github-blog/posts)**.*
+*See all posts **[here](https://usmanasifbutt.github.io/blog/posts)**.*
 
 ---
 <br>
-## 🛠 What I’m Working On  
-- Improving **Celery** task execution for large-scale DB operations
-- Improving **Elasticsearch** indexing performance  
+## ✨ Why This Blog?  
+This journal is where I document my learnings, technical deep dives, and best practices in backend engineering.  
 
 ---
 <br>
