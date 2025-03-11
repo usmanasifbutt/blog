@@ -1,4 +1,10 @@
 theme: minima
 title: Usman Asif's Tech Journal 🚀
+author:
+  name: Usman Asif
+  email: usman.asif2208@gmail.com
 header_pages:
   - about.md
+
+minima:
+  skin: dark
