@@ -5,3 +5,10 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
+
+footer {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+}
