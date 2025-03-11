@@ -1,2 +1,5 @@
 theme: minima
 title: Usman Asif's Tech Journal 🚀
+header_pages:
+  - about.md
+  - contact.md

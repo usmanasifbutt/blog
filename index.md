@@ -1,5 +1,5 @@
 ---
-title: "👋 Hi there!"
+title: "Welcome to My Tech Blog"
 date: 2025-03-11
 author: "Usman Asif"
 layout: default
@@ -14,7 +14,7 @@ Hi! I'm a developer working on backend systems. This blog is where I share updat
 ## Latest Posts  
 - **[Understanding Celery: Distributed Task Queues in Django](https://usmanasifbutt.github.io/github-blog/2025/03/11/celery-overview.html)**
 
-*See all posts [here](https://usmanasifbutt.github.io/github-blog/posts).*
+*See all posts **[here](https://usmanasifbutt.github.io/github-blog/posts)**.*
 
 ---
 <br>

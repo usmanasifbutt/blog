@@ -8,5 +8,4 @@ layout: page
 - **[{{ post.title }}]({{ post.url }})** ({{ post.date | date: "%B %d, %Y" }})  
   *Author:* {{ post.author }}  
   *Description:* {{ post.description | default: "No description available." }}  
-  ---
 {% endfor %}
