@@ -12,9 +12,11 @@ Hi! I'm a developer working on backend systems. This blog is where I share updat
 ---
 <br>
 ## Latest Posts  
-- **[Understanding Celery: Distributed Task Queues in Django](https://usmanasifbutt.github.io/blog/2025/03/11/celery-overview.html)**
+{% for post in site.posts limit:3 %}
+- **[{{ post.title }}]({{ post.url | relative_url }})** ({{ post.date | date: "%B %d, %Y" }})
+{% endfor %}
 
-*See all posts **[here](https://usmanasifbutt.github.io/blog/posts)**.*
+*See all posts **[here]({{ "/blog/posts" | relative_url }})**.*
 
 ---
 <br>
@@ -24,7 +26,7 @@ This journal is where I document my learnings, technical deep dives, and best pr
 ---
 <br>
 ## 🔗 Follow My Work  
-- GitHub: [github.com/usmanasifbutt](#)  
-- LinkedIn: [linkedin.com/in/usman-asif-ua2208/](#)  
+- GitHub: [github.com/usmanasifbutt](https://github.com/usmanasifbutt)  
+- LinkedIn: [linkedin.com/in/usman-asif-ua2208/](https://www.linkedin.com/in/usman-asif-ua2208/)  
 
 Stay tuned for more updates!
