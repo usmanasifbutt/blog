@@ -2,6 +2,7 @@
 title: "Understanding Celery: Distributed Task Queues in Django"
 date: 2025-03-11
 author: "Usman Asif"
+description: "A deep dive into how Celery handles distributed task queues in Django, including best practices and optimizations."
 ---
 
 ## Introduction  
