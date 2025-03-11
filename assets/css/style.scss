@@ -6,6 +6,9 @@
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
 
+header {
+    padding: 10px 0px;
+}
 footer {
     text-align: center;
     position: relative;
