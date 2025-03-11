@@ -10,21 +10,21 @@ layout: home
 Hi! I'm a developer working on backend systems. This blog is where I share updates about my work, insights into RestAPIs, Databases, Background jobs, RabbitMQ, Elasticsearch, and other cool tech I'm working with.
 
 ---
-<br>
+<p></p>
 ## Latest Posts  
 {% for post in site.posts limit:3 %}
 - **[{{ post.title }}]({{ post.url | relative_url }})** ({{ post.date | date: "%B %d, %Y" }})
 {% endfor %}
 
-*See all posts **[here]({{ "/blog/posts" | relative_url }})**.*
+*See all posts **[here]({{ "/posts" | relative_url }})**.*
 
 ---
-<br>
+<p></p>
 ## ✨ Why This Blog?  
 This journal is where I document my learnings, technical deep dives, and best practices in backend engineering.  
 
 ---
-<br>
+<p></p>
 ## 🔗 Follow My Work  
 - GitHub: [github.com/usmanasifbutt](https://github.com/usmanasifbutt)  
 - LinkedIn: [linkedin.com/in/usman-asif-ua2208/](https://www.linkedin.com/in/usman-asif-ua2208/)  
