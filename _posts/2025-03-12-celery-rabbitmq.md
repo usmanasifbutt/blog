@@ -20,37 +20,37 @@ Celery is a powerful distributed task queue system, and RabbitMQ is one of its m
 
 To run RabbitMQ, you need Docker installed on your system. If you don’t have it, install it using:
 
-<code>
+<pre><code>
 brew install docker  # macOS (use apt or yum for Linux)
-</code>
+</code></pre>
 
 ### 2️⃣ Start RabbitMQ
 
 You can start RabbitMQ using a simple Docker command. First, create an alias for convenience:
 
-<code>
+<pre><code>
 alias rmq="docker run -d --name rabbitmq-3 -p 5672:5672 -p 15672:15672 rabbitmq:3-management"
-</code>
+</code></pre>
 
 Now start RabbitMQ with:
 
-<code>
+<pre><code>
 rmq
-</code>
+</code></pre>
 
 ### 3️⃣ Verify the Installation
 
 Check if RabbitMQ is running properly by querying the queues:
 
-<code>
+<pre><code>
 curl 'http://guest:guest@localhost:15672/api/queues'
-</code>
+</code></pre>
 
 If RabbitMQ is running, it should return `[]` (an empty list of queues). If there are errors, run RabbitMQ without `-d` to see logs:
 
-<code>
+<pre><code>
 docker run --name rabbitmq-3 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
-</code>
+</code></pre>
 
 ----------
 
@@ -60,15 +60,15 @@ docker run --name rabbitmq-3 -p 5672:5672 -p 15672:15672 rabbitmq:3-management
 
 If you haven't installed Celery, do so using pip:
 
-<code>
+<pre><code>
 pip install celery
-</code>
+</code></pre>
 
 ### 2️⃣ Configure Celery with RabbitMQ
 
 Create a `celery.py` file in your Django or Python project:
 
-<code>
+<pre><code>
 from celery import Celery
 
 app = Celery('my_project', broker='pyamqp://guest@localhost//')
@@ -76,15 +76,15 @@ app = Celery('my_project', broker='pyamqp://guest@localhost//')
 @app.task
 def add(x, y):
     return x + y
-</code>
+</code></pre>
 
 ### 3️⃣ Running Celery Worker
 
 Start a Celery worker with:
 
-<code>
+<pre><code>
 celery -A celery worker --loglevel=info
-</code>
+</code></pre>
 
 You should see output indicating Celery is connected to RabbitMQ.
 
@@ -98,28 +98,28 @@ RabbitMQ allows you to define and manage queues explicitly. You can do this via 
 
 Modify `celery.py` to route tasks to specific queues:
 
-<code>
+<pre><code>
 app.conf.task_routes = {
     'tasks.add': {'queue': 'math_queue'},
 }
-</code>
+</code></pre>
 
 Then, start a worker for that queue:
 
-<code>
+<pre><code>
 celery -A celery worker -Q math_queue --loglevel=info
-</code>
+</code></pre>
 
 ### 2️⃣ Creating a Dead Letter Queue (DLQ)
 
 To handle failed tasks, configure a DLQ:
 
-<code>
+<pre><code>
 app.conf.task_queues = {
     Queue('math_queue', exchange=Exchange('math', type='direct'), routing_key='math'),
     Queue('dlq', exchange=Exchange('dlx', type='direct'), routing_key='dlq'),
 }
-</code>
+</code></pre>
 
 This ensures failed tasks are sent to `dlq` for later processing.
 
@@ -129,13 +129,13 @@ This ensures failed tasks are sent to `dlq` for later processing.
 
 To test your Celery setup, open a Python shell:
 
-<code>
+<pre><code>
 from celery import Celery
 app = Celery('my_project', broker='pyamqp://guest@localhost//')
 
 result = app.send_task('tasks.add', args=[10, 5], queue='math_queue')
 print(result.get())
-</code>
+</code></pre>
 
 This should output `15` after processing the task.
 
