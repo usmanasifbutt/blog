@@ -2,6 +2,8 @@
 
 Welcome to my personal tech blog! This blog is built using **GitHub Pages** and **Jekyll**, where I share insights on backend development, distributed systems, databases, and more.
 
+Blog: https://usmanasifbutt.github.io/blog/
+
 ## 📝 About This Repository
 
 This repository contains the source code for my blog. It is powered by **Jekyll**, which converts Markdown (`.md`) files into a static website. If you'd like to contribute a blog post or suggest improvements, you're welcome to do so!
