@@ -17,7 +17,6 @@ footer {
     padding-bottom: 0 !important;
 }
 pre {
-  padding: 12px;
   border-radius: 8px;
   overflow-x: auto; /* Ensures long commands don't break */
 }
@@ -26,5 +25,4 @@ code {
   font-family: Consolas, "Courier New", monospace;
   color: crimson;
   font-size: 105%;
-  white-space: normal;
 }
